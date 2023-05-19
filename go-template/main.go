@@ -1,10 +1,10 @@
 package main
 
 import (
-	"io/ioutil"
 	"os"
 	"text/template"
 )
+
 
 type (
 	Location struct {
@@ -24,7 +24,8 @@ type (
 )
 
 func main() {
-	message, err := ioutil.ReadFile("/Users/panqinzhang/github/fly-go/example.gohtml")
+
+	message, err := os.ReadFile("./example.gohtml")
 	if err != nil {
 		panic(err)
 	}
