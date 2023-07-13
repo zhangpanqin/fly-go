@@ -1,11 +1,14 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"errors"
+	"github.com/aws/smithy-go"
+	"log"
+)
 
 func main() {
-	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.String(200, "Hello, Geektutu")
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080
+	var ae smithy.APIError
+	if errors.As(nil, &ae) {
+		log.Printf("code: %s, message: %s, fault: %s", ae.ErrorCode(), ae.ErrorMessage(), ae.ErrorFault().String())
+	}
 }
