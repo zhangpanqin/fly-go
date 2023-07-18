@@ -13,11 +13,9 @@ func main() {
 
 // 一样可以修改 arr 内容
 func Sum223(arr []string) {
-	fmt.Printf("%d \n", arr)
 	arr = append(arr, "Sum22 传的指针")
 }
 
 func Sum22(arr *[]string) {
-	fmt.Printf("%d \n", arr)
 	*arr = append(*arr, "Sum22 传的指针")
 }
