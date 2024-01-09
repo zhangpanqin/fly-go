@@ -1,0 +1,22 @@
+env: local
+data:
+  aurora:
+    username: "root"
+    password: "123456"
+    host: "localhost"
+    port: 3306
+    database: "sandbox"
+    maxOpenConns: 20
+    connMaxLifetime: 30m
+    maxIdleConns: 5
+gitlab:
+  host: "https://git.swfcn.i.mercedes-benz.com"
+  watchDog:
+    token:
+      - "glpat-9iiZHx1JmyF9heMbykyy"
+      - "glpat-CLvqXb_osZyMrTHKB6iJ"
+      - "glpat-bwYnMpyugsjB957BHNcq"
+  luckyDog:
+    token:
+      - "glpat--_VuPQexhqzhNYXKUAYZ"
+      - "glpat-m5Rp3Z9AAsxX3edFMR6W"
